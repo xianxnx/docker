@@ -1,0 +1,7 @@
+docker run -d --name mongoexpress --network mynet --restart=always \
+-p "8081:8081" \
+-e ME_CONFIG_BASICAUTH_ENABLED=true \
+-e ME_CONFIG_BASICAUTH_USERNAME=mongoexpressuser \
+-e ME_CONFIG_BASICAUTH_PASSWORD=mongoexpresspass \
+-e ME_CONFIG_MONGODB_URL="mongodb://root:example@mongodb:27017/" \
+mongo-express
